@@ -9,7 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,TouchableOpacity
 } from 'react-native';
 import codePush from "react-native-code-push";
 
@@ -43,7 +43,7 @@ export default class App extends Component{
          Hello Again
         </Text>
         <Text style={styles.instructions}>
-         Hello Again
+         Hello Again Added
         </Text>
         <Text style={styles.instructions}>
           {instructions}
