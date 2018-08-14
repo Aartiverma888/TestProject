@@ -40,6 +40,12 @@ export default class App extends Component{
           To get started, edit App.js
         </Text>
         <Text style={styles.instructions}>
+         Hello Again
+        </Text>
+        <Text style={styles.instructions}>
+         Hello Again
+        </Text>
+        <Text style={styles.instructions}>
           {instructions}
         </Text>
         <TouchableOpacity onPress={this.onButtonPress}>
