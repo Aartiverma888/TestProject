@@ -21,7 +21,7 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component{
+class App extends Component{
 
   onButtonPress() {
     codePush.sync({
@@ -43,7 +43,7 @@ export default class App extends Component{
          Hello Again
         </Text>
         <Text style={styles.instructions}>
-         Hello Again Added
+         Hello Again Added second time?????
         </Text>
         <Text style={styles.instructions}>
           {instructions}
@@ -56,6 +56,11 @@ export default class App extends Component{
   }
 }
 
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  installMode: codePush.InstallMode.ON_NEXT_RESTART
+  }
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -74,3 +79,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default codePush(codePushOptions)(App);
